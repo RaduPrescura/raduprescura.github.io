@@ -1,0 +1,733 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Avatar Creator - Genies Avatar SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#avatar-creator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Genies Avatar SDK" class="md-header__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genies Avatar SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Avatar Creator
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_overview/" class="md-tabs__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Avatar Creator SDK
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../roadmap/" class="md-tabs__link">
+      Roadmap
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../support/" class="md-tabs__link">
+      Support
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Genies Avatar SDK" class="md-nav__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Genies Avatar SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        What is Genies?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Avatar API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_overview/" class="md-nav__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Avatar Creator SDK
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar Creator SDK" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar Creator SDK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Avatar Creator
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Avatar Creator
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#android" class="md-nav__link">
+    Android
+  </a>
+  
+    <nav class="md-nav" aria-label="Android">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    Integration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks" class="md-nav__link">
+    Callbacks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ios" class="md-nav__link">
+    iOS
+  </a>
+  
+    <nav class="md-nav" aria-label="iOS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading" class="md-nav__link">
+    Loading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unloading" class="md-nav__link">
+    Unloading
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="avatar-creator">Avatar Creator<a class="headerlink" href="#avatar-creator" title="Permanent link">#</a></h1>
+<p>The <strong>Avatar Creator SDK</strong> allows you to bring the full Genies Avatar experience <strong>inside your native app</strong>! </p>
+<p>Users can <strong>create their Avatar inside your app</strong> and access their <strong>Avatar Stickers</strong> and <strong>Avatar Animations</strong> libraries.</p>
+<p><img alt="Screenshot" src="../img/ss_choose_gender.jpg" style="width:300px" />
+<img alt="Screenshot" src="../img/ss_avatar_creator.jpg" style="width:300px" /></p>
+<p>The Avatar Creator is a Unity plugin made available through an <a href="#android">Android Library</a> and an <a href="#ios">iOS Library</a>. </p>
+<h2 id="android">Android<a class="headerlink" href="#android" title="Permanent link">#</a></h2>
+<p>To make the Avatar Creator easier to integrate in your Android App we created a library: <a href="https://github.com/geniesinc/android-composer-library">https://github.com/geniesinc/android-composer-library</a></p>
+<h3 id="integration">Integration<a class="headerlink" href="#integration" title="Permanent link">#</a></h3>
+<p>To integrate the Avatar Creator library follow these steps: </p>
+<ol>
+<li>Open build.gradle (project) file and add to allprojects/repositories:
+ <div class="highlight"><pre><span></span><code>maven {
+           url &#39;https://jitpack.io&#39;
+           credentials { username authToken }
+       }
+</code></pre></div></li>
+<li>Open gradle.proprties and add: 
+ <div class="highlight"><pre><span></span><code>authToken={{YOUR_AUTH_TOKEN}}
+</code></pre></div>
+ The <code>authToken</code> will be provided when <a href="..#step-one-apply-for-a-partner-account">applying for a Partner Account</a>.</li>
+<li>Open build.gradle (Module: app) file. Add to dependencies: 
+ <div class="highlight"><pre><span></span><code>implementation &#39;com.github.geniesinc:android-composer-library:0.0.11&#39;
+</code></pre></div></li>
+<li>
+<p>Open strings.xml and add:
+ <string name="game_view_content_description">Avatar Creator</string></p>
+</li>
+<li>
+<p>The Avatar Creator needs to be loaded in a separate activity with a dedicated process attached. The Avatar Creator Unity plugin kills the current process when it unloads.</p>
+</li>
+<li>
+<p>In the activity, to add the Avatar Creator view:
+<div class="highlight"><pre><span></span><code>  val composerCallback = object: GeniesComposerLoader.ComposerCallback {
+      override fun onComposerLoaded() {
+          Log.d(TAG, &quot;Composer loaded&quot;)
+          pb_loading.visibility = View.GONE
+      }
+
+      override fun onComposerUnloaded() {
+          Log.d(TAG, &quot;Composer unloaded&quot;)
+      }
+}
+
+GeniesComposerLoader.loadGeniesComposerIntoView(
+   parentView = composer_container,
+   lifecycleOwner = this,
+   credentialsJson = testCredentials,
+   composerCallback = composerCallback
+)
+</code></pre></div></p>
+</li>
+</ol>
+<p>The credentialsJson should be a JSON String containting: </p>
+<ul>
+<li>the user <code>userId</code></li>
+<li><a href="../authentication/#partner-api-account-sign-in">the Partner's API Account Refresh Token</a></li>
+<li>the Partner's API Key provided when <a href="..#step-one-apply-for-a-partner-account">applying for the Partner Account</a></li>
+</ul>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>{
+    userId: {{AVATAR_USER_ID}},
+    refreshToken: {{PARTNER_API_ACCOUNT_REFRESH_TOKEN}},
+    apiKey: {{PARTNER_API_KEY}}
+}
+</code></pre></div></p>
+<h3 id="callbacks">Callbacks<a class="headerlink" href="#callbacks" title="Permanent link">#</a></h3>
+<p>When loading the Avatar Creator you can supply a <code>GeniesComposerLoader.ComposerCallback</code>. </p>
+<p><code>onComposerLoaded()</code> getts called when the Avatar Creator finishes loading the user Avatar and is ready to be visible on screen. </p>
+<p><code>onComposerUnloaded()</code> getts called when a user action (SAVE, QUIT) triggers the closing of the Avatar Creator. </p>
+<h2 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">#</a></h2>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h3>
+<p>You can install the iOS Genies Avatar library via <strong>Cocoapods</strong>:</p>
+<ol>
+<li>
+<p>Add <code>pod "GeniesAvatarKit", git: "https://github.com/geniesinc/GeniesAvatarKit.git"</code> (proper github credentials are
+   required)</p>
+</li>
+<li>
+<p>Disable Bitcode in XCode project settings - In XCode go to your <code>project settings</code> &gt; <code>Build Settings</code> &gt; Make
+   sure <code>All</code> is selected and search for <code>bitcode</code> - Set it to <code>Enabled = No</code></p>
+</li>
+</ol>
+<p><img alt="Screenshot" src="../img/disable_bitcode.png" /></p>
+<ol>
+<li>In AppDelegate add the following:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Foundation</span>
+<span class="kd">import</span> <span class="nc">UIKit</span>
+<span class="kd">import</span> <span class="nc">GeniesAvatarKit</span>
+
+<span class="c1">// Required</span>
+<span class="kd">import</span> <span class="nc">MachO</span>
+
+<span class="kr">@UIApplicationMain</span>
+<span class="kd">class</span> <span class="nc">AppDelegate</span><span class="p">:</span> <span class="bp">UIResponder</span><span class="p">,</span> <span class="bp">UIApplicationDelegate</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nv">window</span><span class="p">:</span> <span class="bp">UIWindow</span><span class="p">?</span>
+
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="n">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="bp">UIApplication</span><span class="p">.</span><span class="n">LaunchOptionsKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+        <span class="n">window</span> <span class="p">=</span> <span class="bp">UIWindow</span><span class="p">(</span><span class="n">frame</span><span class="p">:</span> <span class="bp">UIScreen</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">bounds</span><span class="p">)</span>
+
+        <span class="c1">// Add the following:</span>
+        <span class="n">UnityLoader</span><span class="p">.</span><span class="n">setHostMainWindow</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+        <span class="n">UnityLoader</span><span class="p">.</span><span class="n">setLaunchOptions</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">)</span>        
+        <span class="kd">let</span> <span class="nv">machineHeader</span> <span class="p">=</span> <span class="nb">UnsafeMutablePointer</span><span class="p">&lt;</span><span class="n">mach_header_64</span><span class="p">&gt;.</span><span class="n">allocate</span><span class="p">(</span><span class="n">capacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">machineHeader</span><span class="p">.</span><span class="n">pointee</span> <span class="p">=</span> <span class="n">_mh_execute_header</span>
+        <span class="n">UnityLoader</span><span class="p">.</span><span class="n">machineHeader</span> <span class="p">=</span> <span class="n">machineHeader</span>
+
+        <span class="n">window</span><span class="p">?.</span><span class="n">rootViewController</span> <span class="p">=</span> <span class="n">StartViewController</span><span class="p">()</span>
+        <span class="n">window</span><span class="p">?.</span><span class="n">makeKeyAndVisible</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="loading">Loading<a class="headerlink" href="#loading" title="Permanent link">#</a></h3>
+<p>Loading the composer is then done anywhere in the app by using <code>UnityLoader.loadComposerWithCredentials</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">loadUserInUnity</span><span class="p">(</span><span class="kc">_</span> <span class="n">user</span><span class="p">:</span> <span class="n">AvatarAPIClient</span><span class="p">.</span><span class="n">User</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">refreshToken</span> <span class="p">=</span> <span class="n">AvatarAppState</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">credentials</span><span class="p">?.</span><span class="n">refreshToken</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Error: The refresh token does not exist&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nv">credentials</span> <span class="p">=</span> <span class="n">AvatarComposerCredentials</span><span class="p">(</span><span class="n">userId</span><span class="p">:</span> <span class="n">user</span><span class="p">.</span><span class="n">userId</span><span class="p">,</span>
+                                                <span class="n">refreshToken</span><span class="p">:</span> <span class="n">refreshToken</span><span class="p">,</span>
+                                                <span class="n">apiKey</span><span class="p">:</span> <span class="n">AvatarAppState</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">apiConfig</span><span class="p">.</span><span class="n">apiKey</span><span class="p">)</span>
+
+    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">jsonCredentialsString</span> <span class="p">=</span> <span class="n">credentials</span><span class="p">.</span><span class="n">jsonString</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Error: Cannot create composer credentials JSON&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="n">UnityLoader</span><span class="p">.</span><span class="n">loadComposerWithUserCredentials</span><span class="p">(</span><span class="n">jsonCredentialsString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">UnityLoader</span><span class="p">.</span><span class="n">showUnity</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>You can read more about the <code>AvatarAppState</code> object <a href="../ios/#state">here</a></p>
+<h3 id="unloading">Unloading<a class="headerlink" href="#unloading" title="Permanent link">#</a></h3>
+<p>Unloading the composer is done via <code>UnityLoader.hideUnity()</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../api_overview/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Avatar API
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../roadmap/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Roadmap
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,607 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Android - Genies Avatar SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#android" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Genies Avatar SDK" class="md-header__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genies Avatar SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Android
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_overview/" class="md-tabs__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../creator_overview/" class="md-tabs__link">
+        Avatar Creator SDK
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../roadmap/" class="md-tabs__link">
+      Roadmap
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../support/" class="md-tabs__link">
+      Support
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Genies Avatar SDK" class="md-nav__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Genies Avatar SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        What is Genies?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Avatar API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_overview/" class="md-nav__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Avatar Creator SDK
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar Creator SDK" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar Creator SDK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creator_overview/" class="md-nav__link">
+        Avatar Creator
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="android">Android<a class="headerlink" href="#android" title="Permanent link">#</a></h1>
+<h2 id="avatar-creator">Avatar Creator<a class="headerlink" href="#avatar-creator" title="Permanent link">#</a></h2>
+<p>For integrating the Avatar Creator in your Android App, see the <a href="../avatar_creator/#android">Avatar Creator / Android section</a></p>
+<h2 id="authentication-api-wrapper-library">Authentication API wrapper library<a class="headerlink" href="#authentication-api-wrapper-library" title="Permanent link">#</a></h2>
+<p>The Authentication API wrapper library provides a convenient way to <a href="../authentication/#partner-api-account-authentication">authenticate with your Partner API Account</a></p>
+<p>The Android Avatar Authentication library can be found at: <a href="https://github.com/geniesinc/android-genies-auth">https://github.com/geniesinc/android-genies-auth</a></p>
+<p>To use the Android Authentication library: </p>
+<ol>
+<li>
+<p>Open gradle.properties file</p>
+<p>Add <code>authToken=TOKEN_PROVIDED_BY_GENIES</code></p>
+</li>
+<li>
+<p>Open build.gradle (project) file
+    Add the following to allprojects / repositories
+<div class="highlight"><pre><span></span><code><span class="n">maven</span> <span class="p">{</span>
+    <span class="n">url</span> <span class="err">&#39;</span><span class="n">https</span><span class="p">:</span><span class="c1">//jitpack.io&#39;</span>
+    <span class="n">credentials</span> <span class="p">{</span> <span class="n">username</span> <span class="n">authToken</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>Open build.gradle (Module: app) file
+    Add to dependencies
+<div class="highlight"><pre><span></span><code><span class="n">implementation</span> <span class="err">&#39;</span><span class="n">com</span><span class="p">.</span><span class="na">github</span><span class="p">.</span><span class="na">geniesinc</span><span class="p">:</span><span class="n">android</span><span class="o">-</span><span class="n">genies</span><span class="o">-</span><span class="n">auth</span><span class="p">:</span><span class="m">0.0</span><span class="p">.</span><span class="m">2</span><span class="o">-</span><span class="n">alpha</span><span class="err">&#39;</span>
+</code></pre></div></li>
+</ol>
+<h3 id="signing-in">Signing in<a class="headerlink" href="#signing-in" title="Permanent link">#</a></h3>
+<p>To manage the authentication session you first need to create an <code>AvatarClient</code> and call <code>signIn</code> using your Partner API Account username and password.</p>
+<p>If successful, sign in provides an AuthSession object containing the <code>IdToken</code> and <code>RefreshToken</code> required in other SDK interactions.</p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span> <span class="kd">val</span> <span class="nv">avatarClient</span> <span class="o">=</span> <span class="n">AvatarClient</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">clientId</span><span class="p">,</span> <span class="kc">null</span><span class="p">)</span>
+<span class="n">avatarClient</span><span class="p">.</span><span class="na">signIn</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+    <span class="p">.</span><span class="na">onSuccess</span> <span class="p">{</span> <span class="n">authSession</span> <span class="o">-&gt;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">authSession</span> <span class="o">=</span> <span class="n">authSession</span>
+    <span class="p">}</span>
+    <span class="p">.</span><span class="na">onFailure</span> <span class="p">{</span> <span class="n">error</span> <span class="o">-&gt;</span> 
+        <span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="s">&quot;GeniesSignIn&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">.</span><span class="na">reason</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></div></p>
+<h3 id="getting-current-session">Getting current session<a class="headerlink" href="#getting-current-session" title="Permanent link">#</a></h3>
+<p>If already signed in, you can use <code>getSession()</code> to get an updated <code>AuthSession</code>. The library refreshes your tokens behind the scene. If the refresh fails, you'll get a failure of type <code>NoCachedSession</code> and need to sign in again.</p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code><span class="n">avatarClient</span><span class="p">.</span><span class="na">getSession</span><span class="p">()</span>
+    <span class="p">.</span><span class="na">onSuccess</span> <span class="p">{</span> <span class="n">authSession</span> <span class="o">-&gt;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">authSession</span> <span class="o">=</span> <span class="n">authSession</span>
+        <span class="c1">// Signed in</span>
+    <span class="p">}</span>
+    <span class="p">.</span><span class="na">onFailure</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">authSession</span> <span class="o">=</span> <span class="kc">null</span>
+        <span class="c1">// Signed out</span>
+    <span class="p">}</span>
+</code></pre></div></p>
+<h2 id="avatar-api-wrapper-library">Avatar API wrapper Library<a class="headerlink" href="#avatar-api-wrapper-library" title="Permanent link">#</a></h2>
+<p>The Avatar API wrapper Library provides a easy way to interact with the Assets and Closet APIs. </p>
+<p>The Android Avatar Library can be found at: <a href="https://github.com/geniesinc/android-genies-api">https://github.com/geniesinc/android-genies-api</a></p>
+<p>To integrate the Avatar API Library into your Android project follow the steps: </p>
+<ol>
+<li>
+<p>Open gradle.properties file</p>
+<p>Add <code>authToken=TOKEN_PROVIDED_BY_GENIES</code></p>
+</li>
+<li>
+<p>Open build.gradle (project) file
+    Add the following to allprojects / repositories
+<div class="highlight"><pre><span></span><code><span class="n">maven</span> <span class="p">{</span>
+    <span class="n">url</span> <span class="err">&#39;</span><span class="n">https</span><span class="p">:</span><span class="c1">//jitpack.io&#39;</span>
+    <span class="n">credentials</span> <span class="p">{</span> <span class="n">username</span> <span class="n">authToken</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+</li>
+<li>Open build.gradle (Module: app) file
+    Add to dependencies
+<div class="highlight"><pre><span></span><code><span class="n">implementation</span> <span class="err">&#39;</span><span class="n">com</span><span class="p">.</span><span class="na">github</span><span class="p">.</span><span class="na">geniesinc</span><span class="p">:</span><span class="n">android</span><span class="o">-</span><span class="n">genies</span><span class="o">-</span><span class="n">api</span><span class="p">:</span><span class="m">0.0</span><span class="p">.</span><span class="m">4</span><span class="o">-</span><span class="n">alpha</span><span class="p">:</span><span class="nd">dev@</span><span class="n">aar</span><span class="err">&#39;</span>
+</code></pre></div></li>
+<li>Use the <code>AvatarAPIClient</code>
+<div class="highlight"><pre><span></span><code>  private val avatarClient: AvatarAPIClient =
+        AvatarAPIClient(YOUR_API_KEY)
+</code></pre></div></li>
+</ol>
+<p><strong>All Avatar API Library interactions need to be authenticated with the <a href="../authentication/#partner-api-account-authentication">Partner's API Account <code>IdToken</code></a></strong></p>
+<h3 id="getting-a-user-by-username">Getting a user by <code>username</code><a class="headerlink" href="#getting-a-user-by-username" title="Permanent link">#</a></h3>
+<p>To get a user's <code>userId</code> use: </p>
+<div class="highlight"><pre><span></span><code><span class="n">avatarClient</span><span class="p">.</span><span class="na">getUser</span><span class="p">(</span><span class="n">idToken</span><span class="p">,</span> <span class="n">username</span><span class="p">)</span>
+    <span class="p">.</span><span class="na">onSuccess</span> <span class="p">{</span> <span class="n">userInfo</span> <span class="o">-&gt;</span>
+        <span class="n">Log</span><span class="p">.</span><span class="na">d</span><span class="p">(</span><span class="s">&quot;UserId&quot;</span><span class="p">,</span> <span class="n">userInfo</span><span class="p">.</span><span class="na">userId</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="p">.</span><span class="na">onFailure</span> <span class="p">{</span> 
+        <span class="c1">// do something</span>
+    <span class="p">}</span>
+<span class="err">``</span>
+
+
+<span class="err">###</span> <span class="n">Getting</span> <span class="n">an</span> <span class="n">user</span><span class="err">&#39;</span><span class="n">s</span> <span class="o">[</span><span class="n">Avatar</span> <span class="n">Closet</span><span class="o">]</span><span class="p">(</span><span class="n">assetsapi</span><span class="p">.</span><span class="na">md</span><span class="err">#</span><span class="n">closet</span><span class="p">)</span>
+
+<span class="n">To</span> <span class="k">get</span> <span class="n">a</span> <span class="n">list</span> <span class="n">of</span> <span class="n">all</span> <span class="n">the</span> <span class="o">[</span><span class="n">assets</span><span class="o">]</span><span class="p">(</span><span class="n">assetsapi</span><span class="p">.</span><span class="na">md</span><span class="err">#</span><span class="n">assets</span><span class="p">)</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">a</span> <span class="n">user</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">closet</span> <span class="n">use</span><span class="p">:</span>
+<span class="err">```</span><span class="n">kotlin</span>
+<span class="n">avatarClient</span><span class="p">.</span><span class="na">getClosetItems</span><span class="p">(</span><span class="n">idToken</span><span class="p">,</span> <span class="n">userId</span><span class="p">)</span>
+    <span class="p">.</span><span class="na">onSuccess</span> <span class="p">{</span> <span class="n">closetItems</span> <span class="o">-&gt;</span>
+        <span class="c1">// process closetItems</span>
+    <span class="p">}</span>
+    <span class="p">.</span><span class="na">onFailure</span> <span class="p">{</span> 
+        <span class="c1">// do something</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h3 id="depositing-an-asset-to-a-users-closet">Depositing an asset to a user's closet<a class="headerlink" href="#depositing-an-asset-to-a-users-closet" title="Permanent link">#</a></h3>
+<p>To deposit an asset to a user's closet use: 
+<div class="highlight"><pre><span></span><code>avatarClient.depositAsset(idToken, userId, assetId)
+    .onSuccess { closetItems -&gt;
+        // process closetItems
+    }
+    .onFailure { 
+        // do something
+    }
+</code></pre></div></p>
+<h3 id="withdrawing-an-asset-from-a-users-closet">Withdrawing an asset from a user's closet<a class="headerlink" href="#withdrawing-an-asset-from-a-users-closet" title="Permanent link">#</a></h3>
+<p>To withdraw an asset from a user's closet use: </p>
+<div class="highlight"><pre><span></span><code>avatarClient.withdrawAsset(idToken, user.userId, assetId, assetInstanceId)
+    .onSuccess { closetItems -&gt;
+        // process closetItems
+    }
+    .onFailure { 
+        // do something
+    }
+</code></pre></div>
+<h3 id="creating-an-anonymous-user">Creating an anonymous user<a class="headerlink" href="#creating-an-anonymous-user" title="Permanent link">#</a></h3>
+<p>To create a managed anonymous user use: 
+<div class="highlight"><pre><span></span><code>avatarClient.createUser(idToken: String, username: String)
+    .onSuccess { userInfo -&gt;
+        Log.d(&quot;UserId&quot;, userInfo.userId)
+    }
+    .onFailure { 
+        // do something
+    }
+</code></pre></div></p>
+<h3 id="deleting-an-anonymous-user">Deleting an anonymous user<a class="headerlink" href="#deleting-an-anonymous-user" title="Permanent link">#</a></h3>
+<p>To delete a managed anonymous user use: 
+<div class="highlight"><pre><span></span><code>avatarClient.deleteUser(idToken: String, userId: String)
+    .onSuccess { userInfo -&gt;
+        Log.d(&quot;UserId&quot;, userInfo.userId)
+    }
+    .onFailure { 
+        // do something
+    }
+</code></pre></div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

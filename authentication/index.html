@@ -1,0 +1,604 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Genies Avatar Authentication - Genies Avatar SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#genies-avatar-authentication" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Genies Avatar SDK" class="md-header__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genies Avatar SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Genies Avatar Authentication
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_overview/" class="md-tabs__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../creator_overview/" class="md-tabs__link">
+        Avatar Creator SDK
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../roadmap/" class="md-tabs__link">
+      Roadmap
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../support/" class="md-tabs__link">
+      Support
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Genies Avatar SDK" class="md-nav__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Genies Avatar SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        What is Genies?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Avatar API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_overview/" class="md-nav__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Avatar Creator SDK
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar Creator SDK" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar Creator SDK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creator_overview/" class="md-nav__link">
+        Avatar Creator
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="genies-avatar-authentication">Genies Avatar Authentication<a class="headerlink" href="#genies-avatar-authentication" title="Permanent link">#</a></h1>
+<h2 id="modes-of-authenticating-a-user">Modes of authenticating a user<a class="headerlink" href="#modes-of-authenticating-a-user" title="Permanent link">#</a></h2>
+<p>There are multiple ways of linking a user with their Genies Avatar: </p>
+<ul>
+<li>Using the pre-built Sign Up/Sign In forms in the <a href="#using-the-genies-avatar-creator">Genies Avatar Creator</a></li>
+<li>Creating custom anonymous users (requires Genies approval)
+ <!-- - Using OpenID connect to authenticate through a 3rd party ID provider -->
+</li>
+</ul>
+<h2 id="using-the-genies-avatar-creator">Using the Genies Avatar Creator<a class="headerlink" href="#using-the-genies-avatar-creator" title="Permanent link">#</a></h2>
+<p>The easiest way to link your users with their Genies Avatar is to use the <a href="../avatar_creator/">Avatar Creator</a></p>
+<p>When using the <a href="../avatar_creator/">Avatar Creator</a> users can create an Avatar Account and associate their personal avatar with it. Every Avatar created this way will get an associated <code>UserId</code> that needs to be stored and associated with the user of the Partner app. </p>
+<p><img alt="Screenshot" src="../img/ss_intro.jpg" style="width:300px" />
+<img alt="Screenshot" src="../img/ss_sign_up.jpg" style="width:300px" /></p>
+<h2 id="using-anonymous-managed-user-accounts">Using anonymous managed user accounts<a class="headerlink" href="#using-anonymous-managed-user-accounts" title="Permanent link">#</a></h2>
+<p>Another way of linking users with their Genies Avatar is using a <a href="#user-management-using-a-genies-partner-account">Partner API Account</a> to create managed user accounts. The managed user accounts are anonymous and all user data is opaque to Genies (no personal user data is sent to Genies). </p>
+<p>For more information about using the Partner API Account check the <a href="../managed_users/">Managed Users</a> section</p>
+<h3 id="the-partner-api-account">The Partner API Account<a class="headerlink" href="#the-partner-api-account" title="Permanent link">#</a></h3>
+<p>In order to created managed accounts for your users, you need to request specific access to this feature while applying for your <a href="..#step-one-apply-for-a-partner-account">Partner Account</a>. </p>
+<p>When approved access to the managed accounts feature, you'll receive credentials for a <a href="#using-the-partner-api-account">Partner API Account</a>. </p>
+<h3 id="partner-api-account-authentication">Partner API Account Authentication<a class="headerlink" href="#partner-api-account-authentication" title="Permanent link">#</a></h3>
+<p>In order to manage anonymous user accounts you need to authenticate with your provided <strong>Partner API Account credentials</strong> and get the associated <code>IdToken</code> and <code>RefreshToken</code>.</p>
+<p>Genies provides multiple ways of authenticating your Partner API Account: </p>
+<ul>
+<li><a href="#partner-api-account-sign-in">HTTP requests</a></li>
+<li><a href="../android/#authentication-library">Android API wrapper library</a></li>
+<li>iOS wrapper</li>
+</ul>
+<h4 id="idtoken-and-refreshtoken">IdToken and RefreshToken<a class="headerlink" href="#idtoken-and-refreshtoken" title="Permanent link">#</a></h4>
+<p>The <code>IdToken</code> is used to authenticate all requests made by the Partner to the <a href="assetsapi.md/#id-token">Avatar API</a> and the <a href="../managed_users/#id-token">Anonymous Users API</a>. It's usually sent as part of the <code>Authorization</code> header. </p>
+<p>The <code>RefreshToken</code> is used to authenticate all interactions with the <a href="../avatar_creator/">Avatar Creator</a></p>
+<p>The <code>IdToken</code> and <code>RefreshToken</code> are provided when <a href="#partner-api-account-authentication">signing in with a Partner API account</a></p>
+<h3 id="partner-api-account-http-authentication">Partner API Account HTTP Authentication<a class="headerlink" href="#partner-api-account-http-authentication" title="Permanent link">#</a></h3>
+<p>The Avatar Authentication API uses <a href="https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_Operations.html">AWS Cognito</a> to handle authentication. The IdToken provided by the authentication flow is used to authenticate all the subsequent actions with the Avatar API.</p>
+<h4 id="http-request-url">HTTP Request URL<a class="headerlink" href="#http-request-url" title="Permanent link">#</a></h4>
+<p>The Authentication API URL is:</p>
+<p><code>https://cognito-idp.us-west-2.amazonaws.com/</code></p>
+<h4 id="requests-and-response-formats">Requests and response formats<a class="headerlink" href="#requests-and-response-formats" title="Permanent link">#</a></h4>
+<p>The Avatar Authentication API uses HTTP POST requests with JSON arguments and JSON responses</p>
+<h4 id="http-header-contents">HTTP Header Contents<a class="headerlink" href="#http-header-contents" title="Permanent link">#</a></h4>
+<p>The Avatar Authentication API requires the following information in the headers of an HTTP request:</p>
+<ul>
+<li>
+<p><strong>Content-Type</strong></p>
+<p>Specifies JSON and the version, for example, <code>Content-Type: application/x-amz-json-1.0</code></p>
+</li>
+<li>
+<p><strong>X-Amz-Target</strong></p>
+<p>Specifies the Cognito Action type, for example: <code>'X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth'</code></p>
+</li>
+</ul>
+<h4 id="http-request-body">HTTP Request Body<a class="headerlink" href="#http-request-body" title="Permanent link">#</a></h4>
+<p>The Avatar API requests require the request body to be sent in JSON format. </p>
+<h4 id="http-responses">HTTP Responses<a class="headerlink" href="#http-responses" title="Permanent link">#</a></h4>
+<p>The Avatar API requests include JSON-formatted data in the response</p>
+<h4 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">#</a></h4>
+<p>When you send requests to and get responses from the Authentication API, you might encounter two types of API error:</p>
+<ul>
+<li>
+<p><strong>Client errors</strong>: </p>
+<p>Client errors are indicated by a 4xx HTTP response code. Client errors indicate that Authentication API found a problem with the client request, such as an authentication failure or missing required parameters. </p>
+</li>
+<li>
+<p><strong>Server errors</strong>: </p>
+<p>Server errors are indicated by a 5xx HTTP response code, and need to be resolved by the Amazon Cognito service</p>
+</li>
+</ul>
+<p>For each API error, the Authentication API returns the following values:</p>
+<ul>
+<li><strong>A status code</strong>, for example, 400</li>
+<li><strong>An error code</strong>, for example, ValidationException</li>
+<li><strong>An error message</strong>, for example, <code>1 validation error detected: Value at 'password' failed to satisfy constraint: Member must have length greater than or equal to 6</code></li>
+</ul>
+<h3 id="partner-api-account-sign-in">Partner API Account Sign In<a class="headerlink" href="#partner-api-account-sign-in" title="Permanent link">#</a></h3>
+<p>To use your Partner API Account you should sign in and get the <code>IdToken</code> used to authenticate all other Avatar SDK interactions. </p>
+<p>To sign in you should use the <code>X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth</code> action header and POST a JSON containing the <code>AuthFlow</code> key set to <code>USER_PASSWORD_AUTH</code> and an <code>AuthParameters</code> object with the <code>USERNAME</code> and <code>PASSWORD</code> keys. </p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code>curl --location --request POST &#39;https://cognito-idp.us-west-2.amazonaws.com/&#39; \
+--header &#39;X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth&#39; \
+--header &#39;Content-Type: application/x-amz-json-1.1&#39; \
+--data-raw &#39;{
+    &quot;AuthFlow&quot;: &quot;USER_PASSWORD_AUTH&quot;,
+    &quot;ClientId&quot;: &quot;YOUR_CLIENT_ID&quot;,
+    &quot;AuthParameters&quot;: {
+        &quot;USERNAME&quot;: &quot;testuser@genies.com&quot;,
+        &quot;PASSWORD&quot;: &quot;exampleToughPassword&quot;
+    }
+}&#39;
+</code></pre></div>
+<p><strong>Response</strong></p>
+<div class="highlight"><pre><span></span><code>HTTP/1.1 200 OK
+Date: Thu, 21 Jan 2021 18:39:38 GMT
+Content-Type: application/x-amz-json-1.1
+Content-Length: 3879
+Connection: keep-alive
+x-amzn-RequestId: 0d716321-5de1-4a8a-87cf-6aca1aa47c89
+
+{
+    &quot;AuthenticationResult&quot;: {
+        &quot;AccessToken&quot;: &quot;eyJraWQiOiJ1Wnh4cHB2VGVvVFJURWZxeGpnZU1OVHd1XC9oQld3U29xMThOa2duQ0xvZz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiNDRmYWEyZS0wMGI1LTQ5ZjItOWZiNC03ZWNjZTEzZjU0OGUiLCJldmVudF9pZCI6IjA2NjNlNWIxLTMxNTctNDEzNC04MmYzLWE4NGUwZGNiNGQyYiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MTEyNTQwNTEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy13ZXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtd2VzdC0yX0VoYnRyRmlFViIsImV4cCI6MTYxMTM0MDQ1MSwiaWF0IjoxNjExMjU0MDUxLCJqdGkiOiI4YTlkMjBhMS01YmRjLTQ0NDMtOTBmOC1mYjBkYzI4YTI2YWMiLCJjbGllbnRfaWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwidXNlcm5hbWUiOiJiNDRmYWEyZS0wMGI1LTQ5ZjItOWZiNC03ZWNjZTEzZjU0OGUifQ.lcCE3siEZ8xIwsWkmc4GYvM8f6kDSR2rjY4bKvYe9HbEZXZUke6E4CfpJ6cM3lMpRqTTO4EEd3icIpqdKvBdtR_lxlk-OFxu20oQIuvhiFLaj_519OUCQL3PkasrvBiSHmjz56HaSTRoyzIfLUMBpGJjQnzmeq8PLmSQXw1i1jgyQjRViRLdPMP3ShpXQBnCSamgsnI0yhKMC7SDz5qwnenQm6DwqIHB43lcqDLmaB2T1JtlKnjmD7WG0jaDEMdED3k70iW6mDEOKBOi4-GSeRzRwsnl9uXDDManOogPBKz2Gjr_feGPFeQxF3N65DxRh3DNlObEpq4dPD_OUvkGHA&quot;,
+        &quot;ExpiresIn&quot;: 86400,
+        &quot;IdToken&quot;: &quot;eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJiNDRmYWEyZS0wMGI1LTQ5ZjItOWZiNC03ZWNjZTEzZjU0OGUiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJldmVudF9pZCI6IjA2NjNlNWIxLTMxNTctNDEzNC04MmYzLWE4NGUwZGNiNGQyYiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjExMjU0MDUxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9FaGJ0ckZpRVYiLCJjb2duaXRvOnVzZXJuYW1lIjoiYjQ0ZmFhMmUtMDBiNS00OWYyLTlmYjQtN2VjY2UxM2Y1NDhlIiwiZXhwIjoxNjExMzQwNDUxLCJpYXQiOjE2MTEyNTQwNTEsImVtYWlsIjoidGVtcG9yYXJ5QGdlbmllcy5jb20ifQ.BcqX5bviYoWDOO1dRd45xoJhPJFIEjFnJNaJYXcoomGob-RNn1MNIXr6qK4IcStX_0-EDjj7O7os5Psnq1Jyk3SOABUKyj1ThnAVBYXzfHAYSj5Q7n9D5wFh4rS1hnmkLQBw0ENNxwaf_sCuQh3x9M00bAy3gOH3Y4IPOCwN7T5n1_1x7TiZEZ1nXeZeSUUJnyzh63xpeB1XLtoBF1B2Sc3bfZQcF93hNGFKspxD5_wvX0dWNuMUr-xXDMSfG8L80p9CorkWEhmLCC7AKC2qK-YVJUcKScRS_kbM-Y0CUD0dRn6pmx8RG2D3-wJRonY2STV3ehWeYx17rA3gpl-c5g&quot;,
+        &quot;RefreshToken&quot;: &quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.BfxMdVNFP7f6W35WUlvihLhCPotJVoXPOHAP1GzU-UHT6WC8KbAFjT77UW22SlOQDlViUz-ykFBZmcYi44LSc9LGaFSPoOYsPpmRkzONqKlk9K9pJ2Wv8t_GaTKc7N5LxBefUpmdgVordpc4LWsJR0JhslR0yh7JsOLZtQ6AahEIzeecLdiBvIgCFpxE-RlqIc34FD_jikwfo6-j0_bFsmptl6BASJhN-K8OZuGXQWhzjjdvKi_h-tkqg2HuSDk52k2LRlg_iGWPoyFUomeWKn_02U1z0ojXjC9OV34u0Wgpmk_hpE34YXs-8fHkRP50YBV-iR4D8qMCdRALJvpYrQ.OlwZ35YXQ7OR5swV.6A7mLSo82yqTlaGRRTtDEklVBgjShZyvtkAqJr4sZ-ec3QqK_OZWWMsMTAIvcGHGxD1CTjZ7ZxFLgmGi17UkylknHmjkV0XzxGUFKMA_mMQcJpXOg58QTlLa2bdC_CAM7hFddZAHGsH7yJd4aZ_h-Bk2FQKlumDYSPufXm_GgJNCINKxzYofEK-GoZP38WO4PiSxuzhxbxPnWTxgbKJZjGhRwqzkYbPNnKLKhnV-qd7o57MrMRNaBUaLvNFJLTpsqJ8hDKDVl5BlkirLgBymQegkkQ4vjmBcfuASwMjALzjqmZpokoZ5ledGOn0lcTMKGRbKGe-x5AtnCFxduCwWJwQFoJgVa38wGrvo7_NUDTVEE_t3L-EwtlEXbOXkVOi8zdxWlsACQJhbTTpJKhJT9eAjhwKF-hkREwMgf7CyVddN-6oYMbPZiTWzkHxDetc03btRoI2iRfxUvwJ3IT59yX_QrNx4KG_Qr7RT3-bEOkBRO6j8PxB2-p79s86Wr4ExuNSo7_mTM2xoXNzp13kDjDAVx1tuyHv8xi6gM7IV4Ly82BroknTxL8vnurbLhQq38ZUNXtixajBPv2KvSBKtdojzq-v0SZn9BNdC66Nl3vEPA3yAOjcta3ehq_JixKC1Cf2dZ4xGfUBOSyXiTXBKZUMsXwesTQqzjZcgEOctAlVITuBhOJ3M78BxHlu-JBHTaxoERsnu3QJT0CN2juyyEZrTubkEhxhu97W_97eXj7AbrwqOIdEAPa8euA-2KpL4W8Fw3go-wyEEqa_ilobotygEomgo-Ql504wqsLAr7NOZEa5FU13kZ939jqEnkLCiIpsyDul0Z37FzbglOvzqykmW2XXyHOVMnSFuzKJI30hJ1txUftrzwZoXRU2_vP2cDN1bv8zYaTYUWkT-nVwGze57AGHkj9m-7Y-KqXYU5W4yPLCQzY9EeBqwXX34AscbpaxbuUONQjRtUpQjqXaZRqFnc-nPI5hoqYKjvR8FwjYDCO7huf9PCgl1oB2VR2m1s6N2CscFg2YAGZlSOJvlxlT3P9qytGYYK1-2ce1AfI2RLg6rurCgbqnFFfBSeqgTr48G95kWhYMlk1k28xs3DBmvNqbrsXrMmk2ZGcpy_TvA58-T-x5TPMo7bpPOSzPcGoJLadpVDv7lTuaUc8CY7L3Un1A1wifiJpY-O7d3wP8Jbmiq3b9NS2sB76h8t8ifVfZcbE20ECI_1-tD6Vw9lhYa6e3Vw3xNPLej0O6xWNR4EAgRKjcYikqfrkHhuWU-cCX513WiVRpoLl-9SS5pqELlLjYR2BJeV7-kVXE0Ly8jePcFut6GcE1P.miEFKs02GC-tXwUmvk0faw&quot;,
+        &quot;TokenType&quot;: &quot;Bearer&quot;
+    },
+    &quot;ChallengeParameters&quot;: {}
+}
+</code></pre></div>
+<h4 id="errors_1">Errors<a class="headerlink" href="#errors_1" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>NotAuthorizedException</strong>: Incorrect username or password.</li>
+</ul>
+<h3 id="refreshing-the-idtoken">Refreshing the IdToken<a class="headerlink" href="#refreshing-the-idtoken" title="Permanent link">#</a></h3>
+<p>The <code>IdToken</code> provided when signing in expires after 1 day and needs to be refreshed using the <code>RefreshToken</code>. The <code>RefreshToken</code> has a validity of 30 days. 
+To refresh the tokens you should POST a JSON containing the <code>AuthFlow</code> key set to <code>REFRESH_TOKEN_AUTH</code> and a <code>AuthParameters</code> object containing the <code>RefreshToken</code>.</p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>curl --location --request POST &#39;https://cognito-idp.us-west-2.amazonaws.com/&#39; \
+--header &#39;X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth&#39; \
+--header &#39;Content-Type: application/x-amz-json-1.1&#39; \
+--data-raw &#39;{
+    &quot;AuthFlow&quot;: &quot;REFRESH_TOKEN_AUTH&quot;,
+    &quot;ClientId&quot;: &quot;YOUR_CLIENT_ID&quot;,
+    &quot;AuthParameters&quot;: {
+        &quot;REFRESH_TOKEN&quot;: &quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.RsNP_jdQ-ocBqevwXhpd_mYX2353asFU1ct2yKAnNqTycxxy5mAyTxEX2-60AjxPYmnXLA3l4P9FyKWyPenuYMt0fMIXJZjJ62ZYuKbnIaSBKFSdQPzDCEqCzaQr-vhdJEux4gwMkvnq0Medw7R-RokR3Y_vpl-XGPz3XKKSYycfNxW4YQQ5hlkAoX7Ni4ocMhVLE7hvw49aFWC4mVwmCmpacegMJDepTfTG5mtCt77VtlL3ZwWgXTEX8QTX9EIbDiFJ8k4lks6o8Ci99Spe-epvOrDyW7ZSov5j8ZYzCU7i6w7nJwwIAleFxBg-ogC6_vR4770CvDe1ygn2SQ0N4Q.Nz-pgOpahA145FWq.I9uxAY5V1X1QpIF4LeeToJcon27To5goGq-V7JpLLE-ou0OCl55cQgZxqvc6jspeIkyTQzwPQpmbIqv15UPMptM_qXQQp-6HT7LiL84GnIHL-nUe2wyyYvpvZpTxmLvbnIyEqxjLKjm_gALmDCL9Vb4mMa7Y504xwlqcutpogVLJFO2aMoShE5FrknYI6A2QbJPmpA9VJerxF3lfagCrxE5_u0gVIQWNxCvLfCklRnP5GArTlzhari3UnCW63Z0yf6_jHKe0NvdzFzgRZzD88j7yPZJvIZOVBKpv3PJ3k_6oVwm4A5wHNoF9UkLuWElPcywj7cwb8FcAV5rPDYxhSGqUBXCC2yrSteDS3gXq4xGRp6kJSQaTN9vfxYNpl_JcVlipEy3b5Lk5yEarxrEP5bmEaAhVzLzfvWkBcUrC5rXyPC83quojjj8_lKTFgVQabiO83j4Vi_2aYS7AIxeN5OdoHQ1qH50MeBU6ro6wZp8Gn_Qp8r9a6RR9ccrMnU-P87TEjcMsPssczu2rYllGK7eFsGthHKUNDIZEywT5LIyFuwvk1Ig8uRKzE2MmpARVv05LsshJyqLglXnIMTuwuPI4vxWtt-9SMwaFR5ZjCha-l-Vrnw5680j08sqchMeP6tRPET6U-CXITt6OAp68j8D6OdHdRYxT8uMCC8NZs-_1VF33sOzvLBYQFeZ34M2H2TeSSldlufIt-bxVWvKen26ogWHFa5RF5913qt-st3SNYwX2v0UCnbk-pODAkmIe-5cCOPw-KKzJQphfBluzAa-CfdkRGOtT0wDp8h58-If4y9nefOtKmvRW-lykpSTrgASWLsXvkn5W1cK--VU5sVpz9dCFMG-LpsZCSSqmdMgEZosbPP3NsUkhpBSJ6oZaEby_qdHw72v-0gtxWl5y-zGNvoYG0-GiJC6MUdX2GyKLJCi4Vf-EpGV3HxiA3FGVR6eurjRq6ZYBaXBRTXD7PIR1I12TacEy6j97kAoW82WFvF5wImnQHHjk7lUc_7fR5OQHtsAq2peIaKU5jylHQY7jhtLRJiiAqCKK18XRRgJeZNTVNcg5wlOiZ9eaMAN-9_YBgZCW4SzAJsrjT1wU56_YV8-DrFhzmfymuzbTZkxvz37BrQ7IQVJKZ_1or6bRiYxMBKgf9aogr8TkDDuRXbOvDC9iod4HO3QoI5mgJhjnX1XlRn5XKXqVKBmFK2YvU0BV7gQJYtXfb83_MbgwpuyY6bYjcQeA-iBDAMwkb2bcbQTfAqAcVrsbGdjTP1uYDUJz7rXQnpCo_UN6G0tqg385kaq9OQHs32xhQK9Mrc261J_tS-eRmyFE.Qy0PzbE2aZqt6d2XsY3-UA&quot;
+    }
+}&#39;
+</code></pre></div></p>
+<p><strong>Response</strong> 
+<div class="highlight"><pre><span></span><code>{
+    &quot;AuthenticationResult&quot;: {
+        &quot;AccessToken&quot;: &quot;eyJraWQiOiJ1Wnh4cHB2VGVvVFJURWZxeGpnZU1OVHd1XC9oQld3U29xMThOa2duQ0xvZz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJldmVudF9pZCI6IjQ4MDM0ODUwLTVmZTktNDgzYy1hYzExLTRkYWJkOThkMDk5OSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2MTE3NzE3OTksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy13ZXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtd2VzdC0yX0VoYnRyRmlFViIsImV4cCI6MTYxMTg1ODIyNSwiaWF0IjoxNjExNzcxODI1LCJqdGkiOiJjODEwMzg2YS0zM2JhLTQ0MDMtODc3Yy1iYzdkMGQ5OWMwNmYiLCJjbGllbnRfaWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwidXNlcm5hbWUiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYifQ.MWhjLH_GZ_Q69_ynrnQDoluFQtyA97Ny1RhMnGWika8IvjDMwmgnxrfpgipPyLXp61e4Hv6LIPTIv6LiQuRB9uPrNYaO--ueFUwwx94qAm_WusHIRzO8OxfGzjiwpfKzJM7Sn4nvzj3xEsFkLJauf1kSK2Kv2a3MyLl4JyReSOR0YOq-x-bWdlWs6anNcCdwxzD53CrKrzlS95KjYV1v2k_XCPmqUOI_WawZEHvNjrLzO16ynKBZLqXRTAwS7N-ddlG5NZ-4iNGurpzoQtO5JqMCtoIuK1H4EAWyIYP77jod1EbYdOxxnq6RS1axuNSoffeXNYWVW6qjxbA4qd8VtA&quot;,
+        &quot;ExpiresIn&quot;: 86400,
+        &quot;IdToken&quot;: &quot;eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV2ZW50X2lkIjoiNDgwMzQ4NTAtNWZlOS00ODNjLWFjMTEtNGRhYmQ5OGQwOTk5IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2MTE3NzE3OTksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy13ZXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtd2VzdC0yX0VoYnRyRmlFViIsImNvZ25pdG86dXNlcm5hbWUiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJleHAiOjE2MTE4NTgyMjUsImlhdCI6MTYxMTc3MTgyNSwiZW1haWwiOiJyaGFkb296b296KzFAZ21haWwuY29tIn0.j89jyW7nQctKTmHfeouj9GMU_v6zhPTHs2lr0Rw-c_hfewtSA-fWh7ayZnwyW-GljUNbnQ-vxvS5_0aIL9uOeb7dXNE2VbG1pHljNPX_IvZ21-g_y9hzoOw-l8vr2PdzB9Cr1FvY8TfMcFEpQRpy6RqpMEIgrNgZOWYzHOiX7BI_c9-tGuLoeoThe-BLCRlxhF4EvKccEUP7pwRxg9mX-BfFLAhRmnqX8iyN-1hcNMxqARaBOmYTg-XChP57iyPgJRidtBW68_KtVzmTFDWzE-U3v6MntjChCOefNLpy_W7dP4BeCFuiv5lQ_JkPK6hLhwbnb_Bml1BdCgoP46nURw&quot;,
+        &quot;TokenType&quot;: &quot;Bearer&quot;
+    }
+}
+</code></pre></div></p>
+<h4 id="errors_2">Errors<a class="headerlink" href="#errors_2" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>NotAuthorizedException</strong>: Invalid Refresh Token</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

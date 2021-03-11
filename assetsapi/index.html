@@ -1,0 +1,611 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Assets API - Genies Avatar SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assets-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Genies Avatar SDK" class="md-header__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genies Avatar SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assets API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_overview/" class="md-tabs__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../creator_overview/" class="md-tabs__link">
+        Avatar Creator SDK
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../roadmap/" class="md-tabs__link">
+      Roadmap
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../support/" class="md-tabs__link">
+      Support
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Genies Avatar SDK" class="md-nav__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Genies Avatar SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        What is Genies?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Avatar API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_overview/" class="md-nav__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Avatar Creator SDK
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar Creator SDK" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar Creator SDK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creator_overview/" class="md-nav__link">
+        Avatar Creator
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="assets-api">Assets API<a class="headerlink" href="#assets-api" title="Permanent link">#</a></h1>
+<p>When creating their Avatar, a user chooses <a href="./#assets">assets</a> that are used to compose the Avatar's appearance or <a href="assetapi.md#closet">Closet</a>. </p>
+<h2 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">#</a></h2>
+<p>An asset represents a feature of the user's avatar. It can be a piece of clothing, an accesory or a body feature. </p>
+<p>Some assets are common for all user avatars, but other assets are customised and need to be assigned to the user by the SDK Partner. </p>
+<h4 id="assets-properties">Assets properties<a class="headerlink" href="#assets-properties" title="Permanent link">#</a></h4>
+<ul>
+<li><strong>Name:</strong> The name of the asset. e.g.: <code>Bunny Helmet</code></li>
+<li><strong>Image:</strong> An image representing the asset</li>
+<li><strong>Description:</strong> A brief description of the asset</li>
+<li><strong>Price:</strong> If applicable: the price of the asset. See <a href="./#assets-universe">Assets Universe</a></li>
+<li><strong>Rarity:</strong> A representation of the availability of the asset. There are different tiers of rarity: <code>basic</code>, <code>very rare</code>. Higher rarity assets will be available in lower quanitities and will eventually go out of stock.</li>
+<li><strong>Quantity:</strong> If applicable: the remaining available quantity of the asset. Items with a limited quantity go out of stock when reaching the quantity limit.</li>
+</ul>
+<p>Asset representation in the API: </p>
+<div class="highlight"><pre><span></span><code> <span class="p">{</span>
+    <span class="nt">&quot;displayName&quot;</span><span class="p">:</span> <span class="s2">&quot;Brown Utility Vest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This is a beautiful Brown Utility Vest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;assetId&quot;</span><span class="p">:</span> <span class="s2">&quot;98658ec1-6a82-4070-a863-9fe7af3b1346&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;jacket-0017-utilityvest_skin0001&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;https://s3.us-west-2.amazonaws.com/genies-cms/assetsViews%2Fmain%2Fjacket-0017-utilityvest_skin0001.png&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;category&quot;</span><span class="p">:</span> <span class="s2">&quot;jacket&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;available&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;priceUsd&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>    
+    <span class="nt">&quot;maxInstanceCount&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;visible&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;rarity&quot;</span><span class="p">:</span> <span class="s2">&quot;basic&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="closet">Closet<a class="headerlink" href="#closet" title="Permanent link">#</a></h2>
+<p>The closet represents all the <a href="assetapi.md#asset">assets</a> currently available to a user. More assets can be <a href="./#assigning-an-asset-to-a-user-s-closet">assigned to a user</a></p>
+<h2 id="assets-universe">Assets Universe<a class="headerlink" href="#assets-universe" title="Permanent link">#</a></h2>
+<p>Each SDK Partner can define their own Asset Universe. An asset universe is a list of <a href="./#assets">assets</a> and <a href="./#Custom assets">custom assets</a> that the users will have available when creating their Avatar. </p>
+<h3 id="custom-assets">Custom assets<a class="headerlink" href="#custom-assets" title="Permanent link">#</a></h3>
+<p>An SDK Partner can create their own custom assets and assign them a <a href="./#Assets properties">rarity, quantity and price</a>. The SDK Partner can provide the custom assets as a user reward, have them available in a Store or assign them to a user based on other logic.</p>
+<h3 id="assets-management-cms">Assets management CMS<a class="headerlink" href="#assets-management-cms" title="Permanent link">#</a></h3>
+<p>The CMS is a tool provided to SDK Partners where you can manage:</p>
+<ul>
+<li>default assets for your user's avatars</li>
+<li>assets that are used as rewards</li>
+<li>assets that appear in the Asset Store</li>
+</ul>
+<p><strong>Access to the CMS tool is granted in the <a href="..#step-one-apply-for-a-partner-account">Partner approval process</a></strong></p>
+<h2 id="making-http-requests">Making HTTP requests<a class="headerlink" href="#making-http-requests" title="Permanent link">#</a></h2>
+<h3 id="http-request-url">HTTP Request URL<a class="headerlink" href="#http-request-url" title="Permanent link">#</a></h3>
+<p>The Assets API URL is: </p>
+<p><code>https://composer-api-dev.genies.com/{{stage}}</code></p>
+<h4 id="stage">Stage<a class="headerlink" href="#stage" title="Permanent link">#</a></h4>
+<p>The <code>stage</code> represents the Avatar API version. The current <code>stage</code> version of the API is <code>v1</code>.</p>
+<p>For testing purposes the <code>stage</code> should be set to <code>dev</code></p>
+<p>e.g.: <code>https://composer-api-dev.genies.com/dev</code></p>
+<h3 id="authenticating-requests">Authenticating requests<a class="headerlink" href="#authenticating-requests" title="Permanent link">#</a></h3>
+<p>Request authentication is done by including the <code>x-api-key: {{SDK_PARTNER_API_KEY}}</code> header and the <code>Authorization: Bearer {{ID_TOKEN}}</code> header</p>
+<h4 id="api-key">API KEY<a class="headerlink" href="#api-key" title="Permanent link">#</a></h4>
+<p>The <code>SDK_PARTNER_API_KEY</code> is provided for the SDK Partner when <a href="..#step-one-apply-for-a-partner-account">applying for a partner account</a></p>
+<p>For testing purposes the <code>SDK_PARTNER_API_KEY</code> in the <code>x-api-key</code> header should be set to <code>defaultapikey-dev-0123456789</code></p>
+<h4 id="id-token">ID TOKEN<a class="headerlink" href="#id-token" title="Permanent link">#</a></h4>
+<p>The <code>ID_TOKEN</code> needed when authenticating the requests is the <code>IdToken</code> provided when the user <a href="../authentication/#signing-in">signs in</a></p>
+<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">#</a></h3>
+<p>When you send requests to and get responses from the Assets API, you might encounter two types of API error:</p>
+<ul>
+<li>
+<p><strong>Client errors</strong>: </p>
+<p>Client errors are indicated by a 4xx HTTP response code. Client errors indicate that Assets API found a problem with the client request, such as an authentication failure or missing required parameters. </p>
+</li>
+<li>
+<p><strong>Server errors</strong>: </p>
+<p>Server errors are indicated by a 5xx HTTP response code, and need to be resolved by the <a href="../support/">team at Genies</a></p>
+</li>
+</ul>
+<p>For each API error, the Authentication API returns the following values:</p>
+<ul>
+<li><strong>A status code</strong>, for example, 400</li>
+<li><strong>An error message</strong>, for example, <code>Access Denied</code></li>
+</ul>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>{
+    &quot;Message&quot;: &quot;Access Denied&quot;
+}
+</code></pre></div></p>
+<h3 id="getting-the-avatar-user-id">Getting the Avatar User Id<a class="headerlink" href="#getting-the-avatar-user-id" title="Permanent link">#</a></h3>
+<p>To interact with a user's Avatar you need to first get the <code>Avatar User Id</code></p>
+<p>To get the <code>Avatar User Id</code> call <code>GET</code> <code>https://composer-api-dev.genies.com/{{stage}}/user</code></p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;https://composer-api-dev.genies.com/dev/user&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV2ZW50X2lkIjoiNDgwMzQ4NTAtNWZlOS00ODNjLWFjMTEtNGRhYmQ5OGQwOTk5IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2MTE3NzE3OTksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy13ZXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtd2VzdC0yX0VoYnRyRmlFViIsImNvZ25pdG86dXNlcm5hbWUiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJleHAiOjE2MTIwMDg5MjcsImlhdCI6MTYxMTkyMjUyNywiZW1haWwiOiJyaGFkb296b296KzFAZ21haWwuY29tIn0.EAVXUe10QTCHf7655aHFipzyNvAcOo0ggP4YOn5mMM-Tv-EbWrIsxWPqqW_0mXykKWyJIuzS2kBWs9IAto6HTZhbWndcGpLR8hyWd4Ls3tRQ2VqZ3wDQzo7rCq97Z6FK3y8dafWzDp72UVUwgfEyAvbaiMONhFAf-9YRKZVpTt7-Xj6eH-zRLfwIb6t_1f5PHmXR7KJ_UOoXerlzQEaKoSOHNkdGAsdpHpO60PLSm-j556mXFhCE2rz9rCX8HWmV1dr-VMf8owK7aWi_-EG9TJB0o6Arc5TwfM3TEO3zp7KU_qiTR5sUMvuUarj37deB56L6ae3V2SI6SoxISMVeUQ&#39;
+</code></pre></div>
+<p><strong>Response</strong></p>
+<div class="highlight"><pre><span></span><code>[
+    {
+        &quot;userId&quot;: &quot;a482ce33-c84b-48c0-81fc-edd1e5f0eae6&quot;,
+        &quot;emailVerified&quot;: false,
+        &quot;email&quot;: &quot;testuser@genies.com&quot;
+    }
+]
+</code></pre></div>
+<h3 id="getting-avatar-info">Getting Avatar Info<a class="headerlink" href="#getting-avatar-info" title="Permanent link">#</a></h3>
+<p>To get information about a user's avatar call <code>GET</code> <code>https://composer-api-dev.genies.com/{{stage}}/avatar?userId={{userId}}</code></p>
+<p>The <code>{{userId}}</code> is provided when getting the <a href="./#getting-the-avatar-user-id">Avatar User Id</a></p>
+<p>The <code>avatarId</code> in the response will be used to generate photos and animations using the <a href="../renderer/">Renderer API</a></p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;https://composer-api-dev.genies.com/dev/avatar?userId=a482ce33-c84b-48c0-81fc-edd1e5f0eae6&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV2ZW50X2lkIjoiNDgwMzQ4NTAtNWZlOS00ODNjLWFjMTEtNGRhYmQ5OGQwOTk5IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2MTE3NzE3OTksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy13ZXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtd2VzdC0yX0VoYnRyRmlFViIsImNvZ25pdG86dXNlcm5hbWUiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJleHAiOjE2MTIwMDg5MjcsImlhdCI6MTYxMTkyMjUyNywiZW1haWwiOiJyaGFkb296b296KzFAZ21haWwuY29tIn0.EAVXUe10QTCHf7655aHFipzyNvAcOo0ggP4YOn5mMM-Tv-EbWrIsxWPqqW_0mXykKWyJIuzS2kBWs9IAto6HTZhbWndcGpLR8hyWd4Ls3tRQ2VqZ3wDQzo7rCq97Z6FK3y8dafWzDp72UVUwgfEyAvbaiMONhFAf-9YRKZVpTt7-Xj6eH-zRLfwIb6t_1f5PHmXR7KJ_UOoXerlzQEaKoSOHNkdGAsdpHpO60PLSm-j556mXFhCE2rz9rCX8HWmV1dr-VMf8owK7aWi_-EG9TJB0o6Arc5TwfM3TEO3zp7KU_qiTR5sUMvuUarj37deB56L6ae3V2SI6SoxISMVeUQ&#39;
+</code></pre></div></p>
+<p><strong>Response</strong>
+<div class="highlight"><pre><span></span><code>[
+    {
+        &quot;avatarId&quot;: &quot;42c6a6da-1da2-4aef-a74e-feb36ae4d404&quot;,
+        &quot;ownerId&quot;: &quot;a482ce33-c84b-48c0-81fc-edd1e5f0eae6&quot;,
+        &quot;created&quot;: 1611922828,
+        &quot;lastModified&quot;: 1611923681,
+        &quot;status&quot;: &quot;visible&quot;,
+        &quot;gender&quot;: &quot;male&quot;,
+        &quot;defType&quot;: &quot;normal&quot;,
+        &quot;definition&quot;: &quot;{\&quot;BodyTypeLabel\&quot;:\&quot;male\&quot;,\&quot;Clothes\&quot;:[\&quot;underwearBottom-0001-base_skin0000\&quot;,\&quot;eyebrows-0006-sassy_skin0000\&quot;,\&quot;hair-0056-tikTok_skin0000\&quot;,\&quot;jacket-0027-floralGreenGucci_skin0000\&quot;],\&quot;FaceBlendshapes\&quot;:[{\&quot;Category\&quot;:\&quot;lips\&quot;,\&quot;AssetName\&quot;:\&quot;e\&quot;,\&quot;IsEnabled\&quot;:true},{\&quot;Category\&quot;:\&quot;ears\&quot;,\&quot;AssetName\&quot;:\&quot;smallBulky\&quot;,\&quot;IsEnabled\&quot;:true}],\&quot;EyeColor\&quot;:\&quot;EyeColor_DarkBrown\&quot;,\&quot;EyebrowColor\&quot;:\&quot;HairColor_DarkBrown\&quot;,\&quot;FacialHairColor\&quot;:\&quot;HairColor_DarkBrown\&quot;,\&quot;HairColor\&quot;:\&quot;HairColor_DarkBrown\&quot;,\&quot;SkinColor\&quot;:\&quot;skinColor_v0001\&quot;}&quot;
+    }
+]
+</code></pre></div></p>
+<h3 id="assigning-an-asset-to-a-users-closet">Assigning an asset to a user's Closet<a class="headerlink" href="#assigning-an-asset-to-a-users-closet" title="Permanent link">#</a></h3>
+<p>In order for an asset to be available to a user it needs to be assigned to their Closet.</p>
+<p>To assign an asset to a user closet you should call <code>PATCH</code> <code>https://composer-api-dev.genies.com/{{stage}}/user/{{userId}}/closet</code> and provide the assignment operation details in the request body. </p>
+<p>The <code>{{userId}}</code> is provided when getting the <a href="./#getting-the-avatar-user-id">Avatar User Id</a></p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code>curl --location --request PATCH &#39;https://composer-api-dev.genies.com/dev/user/a482ce33-c84b-48c0-81fc-edd1e5f0eae6/closet&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImV2ZW50X2lkIjoiNDgwMzQ4NTAtNWZlOS00ODNjLWFjMTEtNGRhYmQ5OGQwOTk5IiwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2MTE3NzE3OTksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy13ZXN0LTIuYW1hem9uYXdzLmNvbVwvdXMtd2VzdC0yX0VoYnRyRmlFViIsImNvZ25pdG86dXNlcm5hbWUiOiJhNDgyY2UzMy1jODRiLTQ4YzAtODFmYy1lZGQxZTVmMGVhZTYiLCJleHAiOjE2MTIwMDg5MjcsImlhdCI6MTYxMTkyMjUyNywiZW1haWwiOiJyaGFkb296b296KzFAZ21haWwuY29tIn0.EAVXUe10QTCHf7655aHFipzyNvAcOo0ggP4YOn5mMM-Tv-EbWrIsxWPqqW_0mXykKWyJIuzS2kBWs9IAto6HTZhbWndcGpLR8hyWd4Ls3tRQ2VqZ3wDQzo7rCq97Z6FK3y8dafWzDp72UVUwgfEyAvbaiMONhFAf-9YRKZVpTt7-Xj6eH-zRLfwIb6t_1f5PHmXR7KJ_UOoXerlzQEaKoSOHNkdGAsdpHpO60PLSm-j556mXFhCE2rz9rCX8HWmV1dr-VMf8owK7aWi_-EG9TJB0o6Arc5TwfM3TEO3zp7KU_qiTR5sUMvuUarj37deB56L6ae3V2SI6SoxISMVeUQ&#39; \
+--header &#39;Content-Type: application/json&#39; \
+--data-raw &#39;[
+    {
+        &quot;op&quot;: &quot;deposit&quot;,
+        &quot;item&quot;: {
+            &quot;assetId&quot;: &quot;2deafeed-13b5-4222-ac48-9ba66e87114a&quot;
+        }
+    }
+]&#39;
+</code></pre></div>
+<p><strong>Response</strong>
+<div class="highlight"><pre><span></span><code>[
+    {
+        &quot;assetId&quot;: &quot;2deafeed-13b5-4222-ac48-9ba66e87114a&quot;,
+        &quot;instanceId&quot;: &quot;94b0ff56-58b0-445b-81af-2af2218c814d&quot;,
+        &quot;inPossession&quot;: true,
+        &quot;updated&quot;: 1611928921
+    }
+]
+</code></pre></div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>

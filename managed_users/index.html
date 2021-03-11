@@ -1,0 +1,582 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.5">
+    
+    
+      
+        <title>Managed anonymous Avatar user accounts - Genies Avatar SDK</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.77f3fd56.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#managed-anonymous-avatar-user-accounts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Genies Avatar SDK" class="md-header__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Genies Avatar SDK
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Managed anonymous Avatar user accounts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api_overview/" class="md-tabs__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../creator_overview/" class="md-tabs__link">
+        Avatar Creator SDK
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../roadmap/" class="md-tabs__link">
+      Roadmap
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../support/" class="md-tabs__link">
+      Support
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Genies Avatar SDK" class="md-nav__button md-logo" aria-label="Genies Avatar SDK">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Genies Avatar SDK
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Overview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        What is Genies?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Avatar API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_overview/" class="md-nav__link">
+        Avatar API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Avatar Creator SDK
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Avatar Creator SDK" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Avatar Creator SDK
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creator_overview/" class="md-nav__link">
+        Avatar Creator
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../roadmap/" class="md-nav__link">
+        Roadmap
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        Support
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="managed-anonymous-avatar-user-accounts">Managed anonymous Avatar user accounts<a class="headerlink" href="#managed-anonymous-avatar-user-accounts" title="Permanent link">#</a></h1>
+<p>Managed users are anonymous Avatar accounts created on a Partner's behalf. A managed user gets associated a random idenitifer int the form of the Avatar <code>userId</code>.</p>
+<p><strong>To create anonymous Avatar users you need to have access to a <a href="../authentication/#the-partner-api-account">Partner API Account</a></strong></p>
+<p>Managing anonymous Avatar users can be done through the <a href="android.md/#creating-an-anonymous-user"><strong>Android Library</strong></a>, the <strong>iOS Library</strong> or through <strong>HTTP Requests</strong>. </p>
+<h2 id="making-http-requests">Making HTTP requests<a class="headerlink" href="#making-http-requests" title="Permanent link">#</a></h2>
+<p>The Assets API URL is: </p>
+<p><code>https://composer-api-dev.genies.com/{{stage}}</code></p>
+<h4 id="stage">Stage<a class="headerlink" href="#stage" title="Permanent link">#</a></h4>
+<p>The <code>stage</code> represents the API version. The current <code>stage</code> version of the API is <code>v1</code>.</p>
+<p>For testing purposes the <code>stage</code> should be set to <code>dev</code></p>
+<p>e.g.: <code>https://composer-api-dev.genies.com/dev</code></p>
+<h3 id="authenticating-requests">Authenticating requests<a class="headerlink" href="#authenticating-requests" title="Permanent link">#</a></h3>
+<p>Request authentication is done by including the <code>x-api-key: {{SDK_PARTNER_API_KEY}}</code> header and the <code>Authorization: Bearer {{ID_TOKEN}}</code> header</p>
+<h4 id="api-key">API KEY<a class="headerlink" href="#api-key" title="Permanent link">#</a></h4>
+<p>The <code>SDK_PARTNER_API_KEY</code> is provided for the SDK Partner when <a href="..#step-one-apply-for-a-partner-account">applying for a partner account</a></p>
+<p>For testing purposes the <code>SDK_PARTNER_API_KEY</code> in the <code>x-api-key</code> header should be set to <code>defaultapikey-dev-0123456789</code></p>
+<h4 id="id-token">ID TOKEN<a class="headerlink" href="#id-token" title="Permanent link">#</a></h4>
+<p>The <code>ID_TOKEN</code> needed when authenticating the requests is the <code>IdToken</code> provided when you <a href="../authentication/#partner-api-account-authentication">Sign In with your Partner API Account</a></p>
+<h3 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">#</a></h3>
+<p>When you send requests to and get responses from the Assets API, you might encounter two types of API error:</p>
+<ul>
+<li>
+<p><strong>Client errors</strong>: </p>
+<p>Client errors are indicated by a 4xx HTTP response code. Client errors indicate that Assets API found a problem with the client request, such as an authentication failure or missing required parameters. </p>
+</li>
+<li>
+<p><strong>Server errors</strong>: </p>
+<p>Server errors are indicated by a 5xx HTTP response code, and need to be resolved by the <a href="../support/">team at Genies</a></p>
+</li>
+</ul>
+<p>For each API error, the Authentication API returns the following values:</p>
+<ul>
+<li><strong>A status code</strong>, for example, 400</li>
+<li><strong>An error message</strong>, for example, <code>Access Denied</code></li>
+</ul>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>{
+    &quot;Message&quot;: &quot;Access Denied&quot;
+}
+</code></pre></div></p>
+<h3 id="creating-an-anonymous-avatar-user">Creating an Anonymous Avatar User<a class="headerlink" href="#creating-an-anonymous-avatar-user" title="Permanent link">#</a></h3>
+<p>To create an anonymous Avatar user call <code>POST</code> <code>https://composer-api-dev.genies.com/{{stage}}/user</code> and provide a username in the request body. </p>
+<p>The <code>userId</code> in the response is a random identifier associated with the created user. <strong>The <code>userId</code> should be saved and associated with your internal user account</strong></p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>curl --location --request POST &#39;https://composer-api-dev.genies.com/dev/user&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0MjQyNjMyOC0zMDU3LTQ1ZWUtYTZhYy0xNjhlZmNkNzhkNzEiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiY29nbml0bzpncm91cHMiOlsiYXBwIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImE3Y2I5NmZlLWVkODAtNDQyYy04N2FlLWJiYjc1YzE2NmRhYiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjEyNTMyMzkzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9FaGJ0ckZpRVYiLCJjb2duaXRvOnVzZXJuYW1lIjoiNDI0MjYzMjgtMzA1Ny00NWVlLWE2YWMtMTY4ZWZjZDc4ZDcxIiwiZXhwIjoxNjEyNjE4NzkzLCJpYXQiOjE2MTI1MzIzOTMsImVtYWlsIjoiYXBpK3Rlc3RpbmdAZ2VuaWVzLmNvbSJ9.ViDZy4oM0SeI1_bvjoPhE8JmZSxpV_zx6bJOq-F3FxPOriJaKH1PlhdeWrl8CT0bsgJDQzT-cd0YItxPF1Uk5W7_0yPDBBU-Ubo3YEspSY0Zy43SFXgK2FIMLSZxQH9hAJq38wijmJXM6PI6-c2alCD0fNrhbrjvgmT1MTs5pPHJnZEMOqEG9V_BUco448glXitBUlwOqmmplS8eH8uSbyao6MF_ZjsuRNXlpwxJFqhPLMYumwxoyo3wFajHaA-LTQI0D849WlCCj6rmXkUzvzFRoFBXq6lp_WCzaQdCSnpkIW7lScJOzm2RikuMdSEYlnysPk8iMTHIFVDrpp9zFA&#39; \
+--header &#39;Content-Type: application/json&#39; \
+--data-raw &#39;{
+    &quot;username&quot;: &quot;funkyuser&quot;
+}&#39;
+</code></pre></div></p>
+<p><strong>Response</strong>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;userId&quot;</span><span class="p">:</span> <span class="s2">&quot;8b3f002d-3552-4f82-8a8e-6017a1b454d1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;funkyuser&quot;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="getting-the-userid-for-an-anonymous-user">Getting the userId for an anonymous user<a class="headerlink" href="#getting-the-userid-for-an-anonymous-user" title="Permanent link">#</a></h3>
+<p>To get the associated <code>userId</code> for a user call <code>GET</code> <code>https://composer-api-dev.genies.com/{{stage}}/user?username={{username}}</code></p>
+<p>The <code>username</code> should be the same <code>username</code> provided when <a href="#creating-an-anonymous-avatar-user">creating the anonymous Avatar user</a>.</p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;https://composer-api-dev.genies.com/dev/user?username=funkyuser&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0MjQyNjMyOC0zMDU3LTQ1ZWUtYTZhYy0xNjhlZmNkNzhkNzEiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiY29nbml0bzpncm91cHMiOlsiYXBwIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImE3Y2I5NmZlLWVkODAtNDQyYy04N2FlLWJiYjc1YzE2NmRhYiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjEyNTMyMzkzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9FaGJ0ckZpRVYiLCJjb2duaXRvOnVzZXJuYW1lIjoiNDI0MjYzMjgtMzA1Ny00NWVlLWE2YWMtMTY4ZWZjZDc4ZDcxIiwiZXhwIjoxNjEyNjE4NzkzLCJpYXQiOjE2MTI1MzIzOTMsImVtYWlsIjoiYXBpK3Rlc3RpbmdAZ2VuaWVzLmNvbSJ9.ViDZy4oM0SeI1_bvjoPhE8JmZSxpV_zx6bJOq-F3FxPOriJaKH1PlhdeWrl8CT0bsgJDQzT-cd0YItxPF1Uk5W7_0yPDBBU-Ubo3YEspSY0Zy43SFXgK2FIMLSZxQH9hAJq38wijmJXM6PI6-c2alCD0fNrhbrjvgmT1MTs5pPHJnZEMOqEG9V_BUco448glXitBUlwOqmmplS8eH8uSbyao6MF_ZjsuRNXlpwxJFqhPLMYumwxoyo3wFajHaA-LTQI0D849WlCCj6rmXkUzvzFRoFBXq6lp_WCzaQdCSnpkIW7lScJOzm2RikuMdSEYlnysPk8iMTHIFVDrpp9zFA&#39;
+</code></pre></div></p>
+<p><strong>Response</strong>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;userId&quot;</span><span class="p">:</span> <span class="s2">&quot;8b3f002d-3552-4f82-8a8e-6017a1b454d1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;funkyuser&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></p>
+<h3 id="deleting-an-anonymous-user">Deleting an anonymous user<a class="headerlink" href="#deleting-an-anonymous-user" title="Permanent link">#</a></h3>
+<p><strong>Deleting an anonymous user will destroy the user's ability to access their Avatar</strong></p>
+<p>To delete an anonymous user call <code>DELETE</code> <code>https://composer-api-dev.genies.com/{{stage}}/user/{{userId}}</code></p>
+<p>The <code>{{userId}}</code> should be the <code>userId</code> provided when creating the anonymous user.</p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>curl --location --request DELETE &#39;https://composer-api-dev.genies.com/dev/user/8b3f002d-3552-4f82-8a8e-6017a1b454d1&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0MjQyNjMyOC0zMDU3LTQ1ZWUtYTZhYy0xNjhlZmNkNzhkNzEiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiY29nbml0bzpncm91cHMiOlsiYXBwIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImE3Y2I5NmZlLWVkODAtNDQyYy04N2FlLWJiYjc1YzE2NmRhYiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjEyNTMyMzkzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9FaGJ0ckZpRVYiLCJjb2duaXRvOnVzZXJuYW1lIjoiNDI0MjYzMjgtMzA1Ny00NWVlLWE2YWMtMTY4ZWZjZDc4ZDcxIiwiZXhwIjoxNjEyNjE4NzkzLCJpYXQiOjE2MTI1MzIzOTMsImVtYWlsIjoiYXBpK3Rlc3RpbmdAZ2VuaWVzLmNvbSJ9.ViDZy4oM0SeI1_bvjoPhE8JmZSxpV_zx6bJOq-F3FxPOriJaKH1PlhdeWrl8CT0bsgJDQzT-cd0YItxPF1Uk5W7_0yPDBBU-Ubo3YEspSY0Zy43SFXgK2FIMLSZxQH9hAJq38wijmJXM6PI6-c2alCD0fNrhbrjvgmT1MTs5pPHJnZEMOqEG9V_BUco448glXitBUlwOqmmplS8eH8uSbyao6MF_ZjsuRNXlpwxJFqhPLMYumwxoyo3wFajHaA-LTQI0D849WlCCj6rmXkUzvzFRoFBXq6lp_WCzaQdCSnpkIW7lScJOzm2RikuMdSEYlnysPk8iMTHIFVDrpp9zFA&#39;
+</code></pre></div></p>
+<p><strong>Response</strong>
+The response is empty.</p>
+<h3 id="getting-a-list-of-users">Getting a list of users<a class="headerlink" href="#getting-a-list-of-users" title="Permanent link">#</a></h3>
+<p>You can get a list of list of anonymous users created on behalf of your Partner API Account. </p>
+<p>To get the user list call <code>GET</code> <code>https://composer-api-dev.genies.com/{{stage}}/user</code></p>
+<p><strong>Example</strong>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;https://composer-api-dev.genies.com/dev/user?username=funkyuser&#39; \
+--header &#39;x-api-key: defaultapikey-dev-0123456789&#39; \
+--header &#39;Authorization: Bearer eyJraWQiOiJGckhlSlBKS1pUeUo0SkR3em9zQTNjYUM0MUNnSkJxZ0FGdUw5N1MwV3hBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI0MjQyNjMyOC0zMDU3LTQ1ZWUtYTZhYy0xNjhlZmNkNzhkNzEiLCJhdWQiOiIybnE4OXI1YjRzdHVnNWxzc2dsZmJncG5tIiwiY29nbml0bzpncm91cHMiOlsiYXBwIl0sImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6ImE3Y2I5NmZlLWVkODAtNDQyYy04N2FlLWJiYjc1YzE2NmRhYiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjEyNTMyMzkzLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl9FaGJ0ckZpRVYiLCJjb2duaXRvOnVzZXJuYW1lIjoiNDI0MjYzMjgtMzA1Ny00NWVlLWE2YWMtMTY4ZWZjZDc4ZDcxIiwiZXhwIjoxNjEyNjE4NzkzLCJpYXQiOjE2MTI1MzIzOTMsImVtYWlsIjoiYXBpK3Rlc3RpbmdAZ2VuaWVzLmNvbSJ9.ViDZy4oM0SeI1_bvjoPhE8JmZSxpV_zx6bJOq-F3FxPOriJaKH1PlhdeWrl8CT0bsgJDQzT-cd0YItxPF1Uk5W7_0yPDBBU-Ubo3YEspSY0Zy43SFXgK2FIMLSZxQH9hAJq38wijmJXM6PI6-c2alCD0fNrhbrjvgmT1MTs5pPHJnZEMOqEG9V_BUco448glXitBUlwOqmmplS8eH8uSbyao6MF_ZjsuRNXlpwxJFqhPLMYumwxoyo3wFajHaA-LTQI0D849WlCCj6rmXkUzvzFRoFBXq6lp_WCzaQdCSnpkIW7lScJOzm2RikuMdSEYlnysPk8iMTHIFVDrpp9zFA&#39;
+</code></pre></div></p>
+<p><strong>Response</strong></p>
+<p>The first user in the list will always represent the <strong>Partner API user account</strong> and will be have the <code>"groups": ["app"]</code> property.</p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;userId&quot;</span><span class="p">:</span> <span class="s2">&quot;42426328-3057-45ee-a6ac-168efcd78d71&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;app&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;emailVerified&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;demo_partner_api_account@genies.com&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;userId&quot;</span><span class="p">:</span> <span class="s2">&quot;6f3c6283-a102-4e33-8058-c1a0aa02feb6&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;parentUserId&quot;</span><span class="p">:</span> <span class="s2">&quot;42426328-3057-45ee-a6ac-168efcd78d71&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;funkyuser&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;userId&quot;</span><span class="p">:</span> <span class="s2">&quot;17af0ade-cb1c-42ad-8518-e5e94b701267&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;parentUserId&quot;</span><span class="p">:</span> <span class="s2">&quot;42426328-3057-45ee-a6ac-168efcd78d71&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;deadbeef&quot;</span>
+    <span class="p">},</span>
+    <span class="err">...</span>
+    <span class="err">...</span>
+    <span class="err">...</span>
+<span class="p">]</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.integrate", "navigation.expand", "navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5cf3e710.min.js"></script>
+      
+    
+  </body>
+</html>
