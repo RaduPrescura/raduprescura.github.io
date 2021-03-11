@@ -1,20 +1,27 @@
 site_name: Genies Avatar SDK
 nav: 
-  - Getting started: 
-    - index.md
+  - Overview: 
+    # - index.md
+    - overview.md
     # - Getting started: gettingstarted.md
-  - API:
-    - Authentication: authentication.md
-    - Managed Anonymous Users: managed_users.md
-    - Avatar API: assetsapi.md
-    - Renderer API: renderer.md
-  - Avatar Creator:
-    - avatar_creator.md
-  # - User management: usermanagement.md
-  # - Avatar: avatarapi.md
-  # - Composer: composer.md
-  - Android: android.md
-  - iOS: ios.md
+  - Avatar API:
+    - api_overview.md
+  # - API:
+  #   - Authentication: authentication.md
+  #   - Managed Anonymous Users: managed_users.md
+  #   - Avatar API: assetsapi.md
+  #   - Renderer API: renderer.md
+  - Avatar Creator SDK:
+    - creator_overview.md
+  # - Avatar Creator:
+  #   - creator_overview.md
+  #   - avatar_creator.md
+  # # - User management: usermanagement.md
+  # # - Avatar: avatarapi.md
+  # # - Composer: composer.md
+  # - Android: android.md
+  # - iOS: ios.md
+  - Roadmap: roadmap.md
   - Support: support.md
 
   # - About: about.md
