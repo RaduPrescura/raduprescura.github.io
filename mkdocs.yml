@@ -1,8 +1,8 @@
 site_name: Genies Avatar SDK
 nav: 
   - Overview: 
-    # - index.md
-    - overview.md
+    - index.md
+    # - overview.md
     # - Getting started: gettingstarted.md
   - Avatar API:
     - api_overview.md
